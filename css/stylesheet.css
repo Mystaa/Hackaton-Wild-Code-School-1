@@ -8,7 +8,7 @@ html, body{
 .background {
     float: left;
     width: 600px;
-    height: 620px;
+    height: 670px;
 }
 
 .container {
@@ -24,7 +24,7 @@ html, body{
     position: relative;
 
 }
-
+nav {display:none; visibility: hidden;}
 nav ul {
     margin: 20px 20px 0 20px;
     list-style-type: none;
