@@ -29,10 +29,14 @@
   </span>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   <form action="index.php" method="post">
 =======
   <form action="ville.php" method="POST">
 >>>>>>> 6875e877835c42fe0d11aa2e23409fea90f79df3
+=======
+  <form action="index.php" method="post">
+>>>>>>> 3cd4cda0b20d36c2bf35eb5d36ed7f32900e106b
     <input type="text" name="ville" placeholder="Entrez la ville de votre choix">
       <input id='search' type="submit" value="Rechercher" />
       <div id="remember-container">
@@ -61,6 +65,9 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3cd4cda0b20d36c2bf35eb5d36ed7f32900e106b
   <?php
   $ville = htmlspecialchars($_POST["ville"]);
   if (!empty($ville)){
@@ -76,8 +83,11 @@
   }
 
   ?>
+<<<<<<< HEAD
 =======
 >>>>>>> 6875e877835c42fe0d11aa2e23409fea90f79df3
+=======
+>>>>>>> 3cd4cda0b20d36c2bf35eb5d36ed7f32900e106b
 
   <div class="background">
       <div class="container">
