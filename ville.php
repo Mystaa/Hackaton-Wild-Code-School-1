@@ -65,7 +65,10 @@
                 <div class="details">
                 <div class="temp"><?php echo $temp; ?><span>c</span></div>
                     <div class="right">
-                        <div id="date">Monday 22 August</div>
+                        <div id="date"><?php
+// Affichage de quelque chose comme : Wednesday the 15th
+echo date('l \t\h\e jS');
+?></div>
                         <div id="summary"></div>
                     </div>
 
