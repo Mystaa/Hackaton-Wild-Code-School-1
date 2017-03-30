@@ -155,27 +155,39 @@ case 2: /*si champ vaut 2 alors on change la hauteur de zone2*/
 
   <?php
 
-  $bite = 0;
+  $index = 0;
 
   if ($desc == "Clear" || $desc == "Atmosphere") {
-      $bite = 4;
+      $index = 4;
+      echo '<style>html {background: url("http://cupboardsupply.co.za/wp-content/uploads/2015/02/weather-background.png") no-repeat center center fixed;  background-size: cover;}</style>';
       echo '<div id="player" class="deezer-widget-player" data-src="http://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=350&height=350&color=007FEB&layout=dark&size=medium&type=playlist&id=2957605482&app_id=230062" data-scrolling="no" data-frameborder="0" data-allowTransparency="true" data-width="350" data-height="350"></div>';
 
   }
   else if ($desc == "Thunderstorm" || $desc == "Clouds" ){
-    $bite = 3;
+    $index = 3;
+    echo '<style>html {background: url("https://s3.amazonaws.com/hoosieragtoday.com/wp-content/uploads/2016/04/dark-clouds.jpg") no-repeat center center fixed;  background-size: cover;}</style>';
+    echo '<div id="player" class="deezer-widget-player" data-src="http://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=350&height=350&color=007FEB&layout=dark&size=medium&type=playlist&id=1310050287&app_id=230062" data-scrolling="no" data-frameborder="0" data-allowTransparency="true" data-width="350" data-height="350"></div>';
   }
   else if ($desc == "Rain" || $desc == "Drizzle" ){
-    $bite = 2;
+    $index = 2;
+    echo '<style>html { background: url(http://cdn.magdeleine.co/wp-content/uploads/2014/05/3jPYgeVCTWCMqjtb7Dqi_IMG_8251-1400x933.jpg) no-repeat center center fixed;  background-size: cover;}</style>';
+    echo '<div id="player" class="deezer-widget-player" data-src="http://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=350&height=350&color=007FEB&layout=dark&size=medium&type=playlist&id=9251660&app_id=230062" data-scrolling="no" data-frameborder="0" data-allowTransparency="true" data-width="350" data-height="350"></div>';
   }
   else if ($desc == "Mist" ){
-    $bite = 1;
+    $index = 1;
+    echo '<style>html{background: url("https://image.noelshack.com/fichiers/2017/13/1490906143-weather-wallpaper-13.jpg") no-repeat center center fixed;  background-size: cover;}</style>';
+    echo '<div id="player" class="deezer-widget-player" data-src="http://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=350&height=350&color=007FEB&layout=dark&size=medium&type=playlist&id=2965515302&app_id=230062" data-scrolling="no" data-frameborder="0" data-allowTransparency="true" data-width="350" data-height="350"></div>';
   }
   else if ($desc == "Snow" ){
-    $bite = 0;
+    $index = 0;
+    echo '<style>html {background: url("http://www.wallfizz.com/nature/neige/3416-glace-et-neige-nord-WallFizz.jpg") no-repeat center center fixed;  background-size: cover;}</style>';
+    echo '<div id="player" class="deezer-widget-player" data-src="http://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=350&height=350&color=007FEB&layout=dark&size=medium&type=playlist&id=18947664&app_id=230062" data-scrolling="no" data-frameborder="0" data-allowTransparency="true" data-width="350" data-height="350"></div>';
   }
   else if ($desc !== "Clear" || $desc !== "Atmosphere" || $desc !== "Thunderstorm" || $desc !== "Clouds" || $desc !== "Rain" || $desc !== "Drizzle" || $desc !== "Mist" || $desc !== "Snow"){
-    $bite = 3;
+    $index = 3;
+    echo '<style>html {background: url("https://s3.amazonaws.com/hoosieragtoday.com/wp-content/uploads/2016/04/dark-clouds.jpg") no-repeat center center fixed;  background-size: cover;}</style>';
+    echo '<div id="player" class="deezer-widget-player" data-src="http://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=350&height=350&color=007FEB&layout=dark&size=medium&type=playlist&id=1310050287&app_id=230062" data-scrolling="no" data-frameborder="0" data-allowTransparency="true" data-width="350" data-height="350"></div>';
+    
   }
 ?>
 
@@ -185,7 +197,7 @@ case 2: /*si champ vaut 2 alors on change la hauteur de zone2*/
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
 <script type="text/javascript">
-    var value= <?= $bite; ?>;
+    var value= <?= $index; ?>;
 
     // 📝 Fetch all DOM nodes in jQuery and Snap SVG
 
