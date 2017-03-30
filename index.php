@@ -28,7 +28,11 @@
     <img src="https://cdn4.iconfinder.com/data/icons/miu/22/circle_close_delete_-128.png"></img>
   </span>
 
+<<<<<<< HEAD
   <form action="index.php" method="post">
+=======
+  <form action="ville.php" method="POST">
+>>>>>>> 6875e877835c42fe0d11aa2e23409fea90f79df3
     <input type="text" name="ville" placeholder="Entrez la ville de votre choix">
       <input id='search' type="submit" value="Rechercher" />
       <div id="remember-container">
@@ -56,6 +60,7 @@
 <script src="js/index.js"></script>
 
 
+<<<<<<< HEAD
   <?php
   $ville = htmlspecialchars($_POST["ville"]);
   if (!empty($ville)){
@@ -71,6 +76,8 @@
   }
 
   ?>
+=======
+>>>>>>> 6875e877835c42fe0d11aa2e23409fea90f79df3
 
   <div class="background">
       <div class="container">
