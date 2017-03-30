@@ -16,7 +16,7 @@
 
 <body>
   <div id="login-button">
-    <img src="http://dqcgrsy5v35b9.cloudfront.net/cruiseplanner/assets/img/icons/login-w-icon.png">
+    <img src="loupe.png">
   </img>
 </div>
 <div id="container">
