@@ -16,7 +16,7 @@
 
 <body>
   <div id="login-button">
-    <img src="http://dqcgrsy5v35b9.cloudfront.net/cruiseplanner/assets/img/icons/login-w-icon.png">
+    <img src="loupe.png">
   </img>
 </div>
 <div id="container">
@@ -25,7 +25,7 @@
     <img src="https://cdn4.iconfinder.com/data/icons/miu/22/circle_close_delete_-128.png"></img>
   </span>
 
-  <form action="ville.php" method="post">
+  <form action="ville.php" method="POST">
     <input type="text" name="ville" placeholder="Entrez la ville de votre choix">
       <input id='search' type="submit" value="Rechercher" />
       <div id="remember-container">
@@ -53,28 +53,6 @@
 <script src="js/index.js"></script>
 
 
-  <?php
-  $ville = htmlspecialchars($_POST["ville"]);
-  if (!empty($ville)){
-
-      $weatherjson = file_get_contents("http://api.openweathermap.org/data/2.5/weather?q=".$ville."&units=metric&appid=3f769c525adf37bcccd252e255f81a53");
-      $weatherarray = json_decode($weatherjson, true);
-      $pressure = $weatherarray["main"]["pressure"];
-      $temp = $weatherarray["main"]["temp"];
-      $humidity = $weatherarray["main"]["humidity"];
-      $name = $weatherarray["name"];
-      $desc = $weatherarray["weather"]["0"]["main"];
-
-  }
-  echo $name;
-  echo "</br> ".$desc;
-  echo "</br>  Pression : ".$pressure;
-  echo " hPa";
-  echo " </br> Temperature : ".$temp;
-  echo " °C";
-  echo " </br> Humidity : ".$humidity;
-  echo "  %";
-  ?>
 
 </body>
 </html>
