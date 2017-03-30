@@ -167,7 +167,7 @@ case 2: /*si champ vaut 2 alors on change la hauteur de zone2*/
     $index = 3;
     echo '<style>html {background: url("https://s3.amazonaws.com/hoosieragtoday.com/wp-content/uploads/2016/04/dark-clouds.jpg") no-repeat center center fixed;  background-size: cover;}</style>';
     echo '<div id="player" class="deezer-widget-player" data-src="http://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=350&height=350&color=007FEB&layout=dark&size=medium&type=playlist&id=1310050287&app_id=230062" data-scrolling="no" data-frameborder="0" data-allowTransparency="true" data-width="350" data-height="350"></div>';
-  }
+  } 
   else if ($desc == "Rain" || $desc == "Drizzle" ){
     $index = 2;
     echo '<style>html { background: url(http://cdn.magdeleine.co/wp-content/uploads/2014/05/3jPYgeVCTWCMqjtb7Dqi_IMG_8251-1400x933.jpg) no-repeat center center fixed;  background-size: cover;}</style>';
