@@ -157,3 +157,8 @@ nav li a.active {
     position: fixed;
     pointer-events: none;
 }
+#player {
+  float: right;
+  margin-right: 100px;
+  margin-top: 160px;
+}

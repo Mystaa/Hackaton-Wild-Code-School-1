@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css";">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:300">
-
+    <link href="http://cdn-files.deezer.com/js/min/dz.js">
 
 </head>
 
@@ -50,6 +50,17 @@
   <a href="#" class="orange-btn">bite</a>
 </form>
 </div>
+<script>
+  (function(d, s, id) { 
+  var js, djs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return; 
+  js = d.createElement(s); js.id = id; 
+  js.src = "http://e-cdn-files.deezer.com/js/widget/loader.js"; 
+   djs.parentNode.insertBefore(js, djs);
+}(document, "script", "deezer-widget-loader"));</script>
+
+<div id="player" class="deezer-widget-player" data-src="http://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=350&height=350&color=007FEB&layout=dark&size=medium&type=playlist&id=2957605482&app_id=230062" data-scrolling="no" data-frameborder="0" data-allowTransparency="true" data-width="350" data-height="350"></div>
+
 <script src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js'></script>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
