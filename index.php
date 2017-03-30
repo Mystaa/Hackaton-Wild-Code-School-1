@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css";">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:300">
-
+    <link href="http://cdn-files.deezer.com/js/min/dz.js">
 
 </head>
 
@@ -44,7 +44,6 @@
  <span class="close-btn">
   <img src="https://cdn4.iconfinder.com/data/icons/miu/22/circle_close_delete_-128.png"></img>
 </span>
-
 <form>
   <script type="text/javascript">// <![CDATA[
 function deroule(champ,valeur)
@@ -57,7 +56,6 @@ case 2: /*si champ vaut 2 alors on change la hauteur de zone2*/
 }
 }
 // ]]></script>
-
 <div id="zone2" style="width: 100%; height: 20px; background: White; border: 1px solid DimGrey; transition: height 1s; -moz-transition: height 1s;-webkit-transition: height 1s;-o-transition: height 1s; overflow: hidden;">
     <div id="bandeau2" style="text-align: center; height: 20px; width: 100%; font-size: medium; color: white; background-color: darkgrey;" onmouseover="deroule(2,250);" onmouseout="deroule(2,20);">Villes Précédentes
     </div>
@@ -67,6 +65,21 @@ case 2: /*si champ vaut 2 alors on change la hauteur de zone2*/
   <a href="#" class="orange-btn">Selectionner</a>
 </form>
 </div>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+<script src="js/index.js"></script>
+<script>
+  (function(d, s, id) { 
+  var js, djs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return; 
+  js = d.createElement(s); js.id = id; 
+  js.src = "http://e-cdn-files.deezer.com/js/widget/loader.js"; 
+   djs.parentNode.insertBefore(js, djs);
+}(document, "script", "deezer-widget-loader"));</script>
+
+<div id="player" class="deezer-widget-player" data-src="http://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=350&height=350&color=007FEB&layout=dark&size=medium&type=playlist&id=2957605482&app_id=230062" data-scrolling="no" data-frameborder="0" data-allowTransparency="true" data-width="350" data-height="350"></div>
+
 <script src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js'></script>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
@@ -772,5 +785,23 @@ case 2: /*si champ vaut 2 alors on change la hauteur de zone2*/
         startLightningTimer();
     }
 </script>
+
+<!-- BDD History -->
+<?php 
+$ville = $_POST['ville']; 
+try
+{
+$bdd = new PDO('mysql:host=localhost;dbname=test', 'user', '');
+}
+catch(Exception $e)
+{
+die('Erreur : '.$e->getMessage());
+}
+
+$req = $bdd->prepare('INSERT INTO ville(ville) VALUES(;ville)');
+$req->execute(array(';Ville' => $_POST['Ville']));
+
+echo 'Ville enregistrée !';
+?>
 </body>
 </html>
