@@ -78,7 +78,7 @@ case 2: /*si champ vaut 2 alors on change la hauteur de zone2*/
    djs.parentNode.insertBefore(js, djs);
 }(document, "script", "deezer-widget-loader"));</script>
 
-<div id="player" class="deezer-widget-player" data-src="http://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=350&height=350&color=007FEB&layout=dark&size=medium&type=playlist&id=2957605482&app_id=230062" data-scrolling="no" data-frameborder="0" data-allowTransparency="true" data-width="350" data-height="350"></div>
+
 
 <script src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js'></script>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
@@ -159,17 +159,24 @@ case 2: /*si champ vaut 2 alors on change la hauteur de zone2*/
 
   if ($desc == "Clear" || $desc == "Atmosphere") {
       $bite = 4;
+      echo '<div id="player" class="deezer-widget-player" data-src="http://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=350&height=350&color=007FEB&layout=dark&size=medium&type=playlist&id=2957605482&app_id=230062" data-scrolling="no" data-frameborder="0" data-allowTransparency="true" data-width="350" data-height="350"></div>';
+
   }
-  else if ($desc == "Thunderstorm" || $desc == "Clouds" )
-  {$bite = 3;}
-  else if ($desc == "Rain" || $desc == "Drizzle" )
-  {$bite = 2;}
-  else if ($desc == "Mist" )
-  {$bite = 1;}
-  else if ($desc == "Snow" )
-  {$bite = 0;}
-  else if ($desc !== "Clear" || $desc !== "Atmosphere" || $desc !== "Thunderstorm" || $desc !== "Clouds" || $desc !== "Rain" || $desc !== "Drizzle" || $desc !== "Mist" || $desc !== "Snow")
-  {$bite = 3;}
+  else if ($desc == "Thunderstorm" || $desc == "Clouds" ){
+    $bite = 3;
+  }
+  else if ($desc == "Rain" || $desc == "Drizzle" ){
+    $bite = 2;
+  }
+  else if ($desc == "Mist" ){
+    $bite = 1;
+  }
+  else if ($desc == "Snow" ){
+    $bite = 0;
+  }
+  else if ($desc !== "Clear" || $desc !== "Atmosphere" || $desc !== "Thunderstorm" || $desc !== "Clouds" || $desc !== "Rain" || $desc !== "Drizzle" || $desc !== "Mist" || $desc !== "Snow"){
+    $bite = 3;
+  }
 ?>
 
 
@@ -791,7 +798,7 @@ case 2: /*si champ vaut 2 alors on change la hauteur de zone2*/
 $ville = $_POST['ville']; 
 try
 {
-$bdd = new PDO('mysql:host=localhost;dbname=test', 'user', '');
+$bdd = new PDO('mysql:host=localhost; dbname = hackaton', 'root', 'Azerty67');
 }
 catch(Exception $e)
 {
@@ -801,7 +808,7 @@ die('Erreur : '.$e->getMessage());
 $req = $bdd->prepare('INSERT INTO ville(ville) VALUES(;ville)');
 $req->execute(array(';Ville' => $_POST['Ville']));
 
-echo 'Ville enregistrée !';
+echo $_POST['ville'];
 ?>
 </body>
 </html>
