@@ -112,9 +112,9 @@ function init()
     }
 
     // ☀️ set initial weather
-
+    var meteoHere = 2;
     TweenMax.set(sunburst.node, {opacity: 0})
-    changeWeather(weather[0]);
+    changeWeather(weather[meteoHere]);
 }
 
 function onResize()
