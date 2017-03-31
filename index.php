@@ -34,17 +34,10 @@
       <div id="remember-container">
       <input type="checkbox" id="checkbox-2-1" class="checkbox" checked="checked"/>
       <span id="remember">Enregistrer la ville</span>
-      <span id="forgotten">Villes précédentes</span>
     </div>
   </form>
 </div>
-<!-- Villes précédentes -->
-<div id="forgotten-container">
- <h1>Villes précédentes</h1>
- <span class="close-btn">
-  <img src="https://cdn4.iconfinder.com/data/icons/miu/22/circle_close_delete_-128.png"></img>
-</span>
-<form>
+
   <script type="text/javascript">// <![CDATA[
 function deroule(champ,valeur)
 {/*valeur est la hauteur en pixel de la zone*/
@@ -56,13 +49,7 @@ case 2: /*si champ vaut 2 alors on change la hauteur de zone2*/
 }
 }
 // ]]></script>
-<div id="zone2" style="width: 100%; height: 20px; background: White; border: 1px solid DimGrey; transition: height 1s; -moz-transition: height 1s;-webkit-transition: height 1s;-o-transition: height 1s; overflow: hidden;">
-    <div id="bandeau2" style="text-align: center; height: 20px; width: 100%; font-size: medium; color: white; background-color: darkgrey;" onmouseover="deroule(2,250);" onmouseout="deroule(2,20);">Villes Précédentes
-    </div>
-    <div id="texte2" style="text-align: center;">Antartica
-    </div>
 </div>
-  <a href="#" class="orange-btn">Selectionner</a>
 </form>
 </div>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js'></script>
@@ -151,7 +138,7 @@ case 2: /*si champ vaut 2 alors on change la hauteur de zone2*/
 <?php 
 // Connexion à la BDD
 $conn = new mysqli('sql11.freemysqlhosting.net', 'sql11166659', 'vyPwdiPUkV', 'sql11166659');
-$sql = "INSERT INTO historique (ville, date, meteo) VALUES ('$ville', '$date', '$desc')";
+$sql = "INSERT INTO historique (ville, temperature, date, meteo) VALUES ('$ville', '$temp', '$date', '$desc')";
 $result = $conn->query($sql);
 $conn->close();
 
